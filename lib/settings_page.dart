@@ -5,16 +5,14 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100),
-          child: Text('Ayarlar'),
-        ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        title: Text('Ayarlar'),
+        centerTitle: true,
       ),
       body: ListView(
         padding: EdgeInsets.all(16),
@@ -82,12 +80,14 @@ class SettingsPage extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Kamera açma işlemleri yapılacak.
-        },
-        child: Icon(Icons.camera_alt),
-        backgroundColor: Colors.green,
+      floatingActionButton: Visibility(
+        child: FloatingActionButton(
+          onPressed: () {
+            // Kamera açma işlemleri yapılacak.
+          },
+          child: Icon(Icons.camera_alt),
+          backgroundColor: Colors.grey[300],
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(

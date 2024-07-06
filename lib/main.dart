@@ -1,3 +1,4 @@
+import 'package:bootcamp_group_14/profile_page.dart';
 import 'package:bootcamp_group_14/settings_page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SettingsPage(),
+      home: ProfilePage(),
     );
   }
 }
