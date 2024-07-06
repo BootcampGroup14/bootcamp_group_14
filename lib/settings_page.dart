@@ -141,6 +141,7 @@ class SettingsItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 20),
       child: InkWell(
         onTap: onTap,
+        borderRadius: BorderRadius.circular(30),
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 16, horizontal: 15),
           decoration: BoxDecoration(
