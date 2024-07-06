@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfileEditPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isKeyboardVisible = MediaQuery.of(context).viewInsets.bottom != 0;
@@ -118,7 +118,7 @@ class ProfilePage extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: Icon(Icons.person), // Aktif ekran olduğu için ikon değiştirilmiştir.
+              icon: Icon(Icons.person), // Aktif ekran olduğu için ikon değiştirilmiştirr.
               onPressed: () {
                 // Profil ekranına yönlendirme yapılacak.
               },
