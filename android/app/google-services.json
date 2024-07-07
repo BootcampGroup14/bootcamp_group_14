@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "52877250726",
+    "project_id": "neyesek-a71ee",
+    "storage_bucket": "neyesek-a71ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52877250726:android:4becff1910afb9859ba467",
+        "android_client_info": {
+          "package_name": "com.example.bootcamp_group_14"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiqU6DZjgqeUVNQb5CI3F-JV1lGMzbHlo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
