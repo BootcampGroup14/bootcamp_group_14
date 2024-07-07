@@ -121,16 +121,17 @@
       <div>
         <h4>Sprint Notları</h4>
         <ul>
-          <li>.</li>
-          <li>.</li>
-          <li>.</li>
+          <li>İlk tanışma toplantısında uygulama fikri belirlendi. Uygulamaya ait Repo GitHub da oluşturuldu.</li>
+          <li>UX/UI çalışmaları Figmada yapıldı.</li>
+          <li>Yapılan tasarımlara uygun arayüz ekranları geliştirildi.</li>
+          <li>Sprint Retrospective toplantısı yapıldı. Ve gerekli dökümanlar oluşturuldu.</li>
         </ul>
       </div>
       <div>
-        Sprint boyunca tamamlanması gereken puan:
+        Sprint boyunca tamamlanması gereken puan:100
       </div>
       <div>
-        Puan tamamlama mantığı:
+        Puan tamamlama mantığı:Sprint başında her sprint için tamamlanması hedeflenen bir puan hedefi belirlenir. Daha sonra oluşturulan backloglara zorluk ve süre değerleri dikkate alınarak puanlama işlemleri yapılır. Sprint boyunca da en başta belirlenen puan hesefine ulaşılması adına görevler alınır ve tamamlanır. 
       </div>
       <div>
         Daily Scrum: -
@@ -141,22 +142,23 @@
       <div>
         <h4>Sprint Review:</h4>
         <ul>
-          <li>.</li>
-          <li>.</li>
-          <li>.</li>
-          <li>.</li>
+          <li>Bu sprintte 100 puan hedeflenmiştir. Spirntte 120 puanlık görev bitirilmiştir. Hedeflenen puanın üstünde puan tamamlanmıştır.</li>
+          <li>Başlangıçta hedeflenen tüm ekranlarla ilgili UX/UI çalışması yapılmıtştır. Tüm ekran dizaynları tamamlnmıştır.</li>
+          <li>UI tasarımları yapılan sayfaların Arayüz kodlamaları yapılmıştır.</li>
+          <li>Login, Register ve Reset Password sayfalarının hem tasarımları hem de backend bağlantıları yapılmıştır.</li>
         </ul>
       </div>
       <div>
-        Sprint Review Katılımcıları:
+        Sprint Review Katılımcıları: Halil İbrahim Dişli - Durukan Çoban - Fahriye Yüksel - Harun Burak Çoban - Fatıma Elmusa
       </div>
       <div>
         <h4>Sprint Retrospective:</h4>
         <ul>
-          <li>.</li>
-          <li>.</li>
-          <li>.</li>
-          <li>.</li>
+          <li>GitHub ile ilgili bazı ekip arkadaşlarımızın bilgisi sınırlı olduğundan commit ve push işlemlerinde zorlanıldı. Bu sorunun daha iyi yönetilebilmesi için başlangıçta bilen ekip üyelerinin bilmeyen ekip üyelerine en başta destek olması daha doğru olabilirdi.</li>
+          <li>Github ile ilgili sprint boyunca güncellemelerin yapılmamasından kaynaklı son günde sıkışıklar oluştu. Onları düzeltmek için zaman harcadık. En başından planlı bir şekilde commit atılabilebilseydi daha sorunsuz olurdu.</li>
+          <li>Figmadaki tasarımlarla Arayüz kodlama süreçlerinin birbiriyle parallel ilerlememesi sebebiyle geliştirme sürecinde bazı sıkıntılar yaşandı. Dizayn süreçleri ile geliştirme süreçleri birbirinden geri bildirim alarak ilenmesinin daha doğru olacağını düşünmekteyiz.</li>
+          <li>Bazı görevlerin kendinden sonraki görevleri etkilemesi ve bu görevin sırasının doğru belirlenememiş olmasından dolayı bazı ekranlarda tekrar revize etme ihtiyacı doğmuştur. Bu gibi sıkıntıların yaşanmaması için birbirine bağlı görevlerin öncelik sırasının doğru belirlenmesi gerekmektedir.</li>
+          <li>UI tasarımlarının Flutter ile uygun özelliklere sahip olmamasından dolayı geliştirme sırasında sıkıntılar yaşandı. UI tasarımları yapılırken boşluk, font, renk, ikon vb. Öğelerin belirlenmiş olması daha doğru olacaktır.</li>
         </ul>
       </div>
       <div>

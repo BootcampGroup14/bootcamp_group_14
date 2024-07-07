@@ -1,6 +1,7 @@
 import 'package:bootcamp_group_14/pages/auth/auth.dart';
 import 'package:bootcamp_group_14/pages/auth/auth_pages/register_screen.dart';
 import 'package:bootcamp_group_14/pages/home_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
