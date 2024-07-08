@@ -111,11 +111,13 @@
     <div class="row">
       <div>
         Sprint 1 - App Ekran Görüntüleri
+        <div>
         <img src="https://i.ibb.co/z8G60bC/giri.jpg" />
         <img src="https://i.ibb.co/4TWYQdJ/anasayfa.jpg" />
         <img src="https://i.ibb.co/DLVbjj1/kaydedilen.jpg" />
         <img src="https://i.ibb.co/Bc7F3wn/profil.jpg" />
         <img src="https://i.ibb.co/10z8rhF/kamera.jpg" />
+        </div>
       </div>
       <div>
         Sprint 1 - Sprint Board Ekran Görüntüsü Güncellemeleri
