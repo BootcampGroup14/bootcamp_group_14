@@ -133,40 +133,39 @@
       </div>
       <div>
         Puan tamamlama mantığı:Sprint başında her sprint için tamamlanması hedeflenen bir puan hedefi belirlenir. Daha sonra oluşturulan backloglara zorluk ve süre değerleri dikkate alınarak puanlama işlemleri yapılır. Sprint boyunca da en başta belirlenen puan hesefine ulaşılması adına görevler alınır ve tamamlanır. 
-      </div>
+      </div><br/>
       <div>
         Daily Scrum: 
-
         
-Toplantı içeriği:
--Logo tasarımına karar verildi.
--Ekipteki bir arkadaşımızın github bilgisi yetersiz kaldığı için diğer ekip arkadaşları ile birlikte githuba yaptığı çalışma gönderildi.
--Sprint değerlendirilmesi yapıldı.
-Toplantı içeriği:
--Yemek uygulamasını yapmaya karar verdik.
--UI/UX ilk  hafta odaklanmaya karar verdik.
--Uygulamanın özellikleri belirlenecek.
--Fatma ve Fahriye Figmadan tasarım yapacak ona göre ikinci hafta kodlar yazılmaya başlanacak.
-
-
--Toplantı içeriği:
-Toplantıda aftasonuna kadar herkesin ne görev aldığını notları ve screenshotları ile kısaca anlatması kararlaştırıldı.
-
-TO DO’dan alınan görev In Progress’e alınacak.In Progress kısmında kişi alınan task’i bitirdikten sonra Test Kısmına atacak. Takım Lideri onayladıktan sonra Done’a çekebilecek.
-
-Her task için ayrı branch açılacak ve branchlarde yapıldıkça commit atılacak.
-
-Trelloda görevi alan kişi açıklama kısmını dolduracak.
-
-Mutfak kısmının ne olduğuna karar verilecek.
-
-Elimizdeki taskler tamamlanınca figmada kalan ekranları backlog oluşturup In Progress kısmına çekerek kalan sürede tamamlayabiliriz.
-
-
-Toplantı içeriği:
--Logo tasarımına karar verildi.
--Ekipteki bir arkadaşımızın github bilgisi yetersiz kaldığı için diğer ekip arkadaşları ile birlikte githuba yaptığı çalışma gönderildi.
--Sprint değerlendirilmesi yapıldı.
+        Toplantı içeriği:
+        -Logo tasarımına karar verildi.
+        -Ekipteki bir arkadaşımızın github bilgisi yetersiz kaldığı için diğer ekip arkadaşları ile birlikte githuba yaptığı çalışma gönderildi.
+        -Sprint değerlendirilmesi yapıldı.
+        Toplantı içeriği:
+        -Yemek uygulamasını yapmaya karar verdik.
+        -UI/UX ilk  hafta odaklanmaya karar verdik.
+        -Uygulamanın özellikleri belirlenecek.
+        -Fatma ve Fahriye Figmadan tasarım yapacak ona göre ikinci hafta kodlar yazılmaya başlanacak.
+        
+        
+        -Toplantı içeriği:
+        Toplantıda aftasonuna kadar herkesin ne görev aldığını notları ve screenshotları ile kısaca anlatması kararlaştırıldı.
+        
+        TO DO’dan alınan görev In Progress’e alınacak.In Progress kısmında kişi alınan task’i bitirdikten sonra Test Kısmına atacak. Takım Lideri onayladıktan sonra Done’a çekebilecek.
+        
+        Her task için ayrı branch açılacak ve branchlarde yapıldıkça commit atılacak.
+        
+        Trelloda görevi alan kişi açıklama kısmını dolduracak.
+        
+        Mutfak kısmının ne olduğuna karar verilecek.
+        
+        Elimizdeki taskler tamamlanınca figmada kalan ekranları backlog oluşturup In Progress kısmına çekerek kalan sürede tamamlayabiliriz.
+        
+        
+        Toplantı içeriği:
+        -Logo tasarımına karar verildi.
+        -Ekipteki bir arkadaşımızın github bilgisi yetersiz kaldığı için diğer ekip arkadaşları ile birlikte githuba yaptığı çalışma gönderildi.
+        -Sprint değerlendirilmesi yapıldı.
       </div>
       <div>
         Ürün Backlog URL: -
