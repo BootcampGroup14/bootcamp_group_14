@@ -135,7 +135,8 @@
         Puan tamamlama mantığı:Sprint başında her sprint için tamamlanması hedeflenen bir puan hedefi belirlenir. Daha sonra oluşturulan backloglara zorluk ve süre değerleri dikkate alınarak puanlama işlemleri yapılır. Sprint boyunca da en başta belirlenen puan hesefine ulaşılması adına görevler alınır ve tamamlanır. 
       </div>
       <div>
-        Daily Scrum: 
+        <p>
+          Daily Scrum: 
         
         Toplantı içeriği:
         -Logo tasarımına karar verildi.
@@ -166,6 +167,7 @@
         -Logo tasarımına karar verildi.
         -Ekipteki bir arkadaşımızın github bilgisi yetersiz kaldığı için diğer ekip arkadaşları ile birlikte githuba yaptığı çalışma gönderildi.
         -Sprint değerlendirilmesi yapıldı.
+        </p>
       </div>
       <div>
         Ürün Backlog URL: -
