@@ -135,11 +135,7 @@
         Puan tamamlama mantığı:Sprint başında her sprint için tamamlanması hedeflenen bir puan hedefi belirlenir. Daha sonra oluşturulan backloglara zorluk ve süre değerleri dikkate alınarak puanlama işlemleri yapılır. Sprint boyunca da en başta belirlenen puan hesefine ulaşılması adına görevler alınır ve tamamlanır. 
       </div>
       <div>
-        <p>
-        Daily Scrum: 
-        
-        
-        </p>
+        Daily Scrum: -
       </div>
       <div>
         Ürün Backlog URL: -
