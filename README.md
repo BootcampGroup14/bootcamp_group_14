@@ -136,6 +136,13 @@
       </div>
       <div>
         <h4>Daily Scrum:</h4>
+        <p>Toplantı içeriği</p>
+        <ul>
+          <li>Yemek uygulamasını yapmaya karar verdik.</li>
+          <li>Yemek uygulamasını yapmaya karar verdik.</li>
+          <li>Yemek uygulamasını yapmaya karar verdik.</li>
+          <li>Yemek uygulamasını yapmaya karar verdik.</li>
+        </ul>
       </div>
       <div>
         Ürün Backlog URL: -
