@@ -139,9 +139,24 @@
         <p>Toplantı içeriği</p>
         <ul>
           <li>Yemek uygulamasını yapmaya karar verdik.</li>
-          <li>Yemek uygulamasını yapmaya karar verdik.</li>
-          <li>Yemek uygulamasını yapmaya karar verdik.</li>
-          <li>Yemek uygulamasını yapmaya karar verdik.</li>
+          <li>UI/UX ilk  hafta odaklanmaya karar verdik.</li>
+          <li>Uygulamanın özellikleri belirlenecek.</li>
+          <li>Fatma ve Fahriye Figmadan tasarım yapacak ona göre ikinci hafta kodlar yazılmaya başlanacak.</li>
+        </ul>
+        <p>Toplantı içeriği</p>
+        <ul>
+          <li>Toplantıda haftasonuna kadar herkesin ne görev aldığını notları ve screenshotları ile kısaca anlatması kararlaştırıldı.</li>
+          <li>TO DO’dan alınan görev In Progress’e alınacak.In Progress kısmında kişi alınan task’i bitirdikten sonra Test Kısmına atacak. Takım Lideri onayladıktan sonra Done’a çekebilecek.</li>
+          <li>Her task için ayrı branch açılacak ve branchlerde yapıldıkça commit atılacak.</li>
+          <li>Trelloda görevi alan kişi açıklama kısmını dolduracak.</li>
+          <li>Mutfak kısmının ne olduğuna karar verilecek.</li>
+          <li>Elimizdeki taskler tamamlanınca figmada kalan ekranları backlog oluşturup In Progress kısmına çekerek kalan sürede tamamlayabiliriz.</li>
+        </ul>
+        <p>Toplantı içeriği</p>
+        <ul>
+          <li>Logo tasarımına karar verildi.</li>
+          <li>Ekipteki bir arkadaşımızın github bilgisi yetersiz kaldığı için diğer ekip arkadaşları ile birlikte githuba yaptığı çalışma gönderildi.</li>
+          <li>Sprint değerlendirilmesi yapıldı.</li>
         </ul>
       </div>
       <div>
