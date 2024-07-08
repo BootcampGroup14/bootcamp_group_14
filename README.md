@@ -114,6 +114,7 @@
       </div>
       <div>
         Sprint 1 - Sprint Board Ekran Görüntüsü Güncellemeleri
+        <img href="https://i.ibb.co/DDN5N8G/Ekran-G-r-nt-s-2024-07-08-20-36-56.png" />
       </div>
       <div>
         Sprint 1 - !!!Burndown Chart!!!
