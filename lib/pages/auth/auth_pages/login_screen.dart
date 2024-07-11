@@ -1,5 +1,6 @@
 import 'package:bootcamp_group_14/components/my_button.dart';
 import 'package:bootcamp_group_14/components/my_text_field.dart';
+import 'package:bootcamp_group_14/home_page.dart';
 import 'package:bootcamp_group_14/pages/auth/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -28,20 +29,18 @@ class _LoginScreenState extends State<LoginScreen> {
     showDialog(
       context: context,
       builder: (context) => Center(
-        child: Image.asset('lib/animations/loading2.gif'),
+        child: Image.asset('assets/splash_screen_white.jpg'), // EKLENECEK
       ),
     );
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailTextController.text,
           password: passwordTextController.text);
-      //yükleme indicatorını kapatma
+
       if (context.mounted) Navigator.pop(context);
     } on FirebaseAuthException {
-      //yükleme indicatorını kapatma
       Navigator.pop(context);
       ScaffoldMessenger.of(context).showSnackBar(
-        //Hata mesajı göster
         displayMessage('E-mail veya şifre yanlış.'),
       );
     }
@@ -50,8 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
   SnackBar displayMessage(String message) {
     return SnackBar(
       content: Text(message),
-      duration:
-          const Duration(seconds: 3), // Snackbar ne kadar süre görüntülenecek?
+      duration: const Duration(seconds: 3),
     );
   }
 
@@ -101,28 +99,32 @@ class _LoginScreenState extends State<LoginScreen> {
                     maxWidth: 120,
                   ),
                   child: Image.asset(
-                    '', // LOGO EKLENECEK
+                    'assets/splash_screen_red.jpg',
                     fit: BoxFit.contain,
                   ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
-                  'H O Ş  G E L D İ N İ Z',
+                const Text(
+                  'GİRİŞ',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontFamily: 'Roboto-Medium',
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.onPrimaryContainer),
+                      color: Colors.white),
                 ),
                 const SizedBox(height: 25),
-
+                const Text(
+                  'Devam etmek için lütfen giriş yapınız.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
+                const SizedBox(height: 25),
                 //email texfield
                 MyTextField(
                     controller: emailTextController,
-                    labeltext: 'E-mail',
+                    hintText: 'E-mail',
                     obscureText: false),
 
                 const SizedBox(
@@ -132,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 MyTextField(
                     isLogin: true,
                     controller: passwordTextController,
-                    labeltext: 'Şifre',
+                    hintText: 'Şifre',
                     obscureText: true),
 
                 const SizedBox(height: 10),
@@ -143,9 +145,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     Row(
                       children: [
                         Checkbox(
-                          checkColor:
-                              Theme.of(context).colorScheme.onBackground,
-                          activeColor: Theme.of(context).colorScheme.secondary,
+                          checkColor: Colors.white,
+                          activeColor: Colors.green,
                           materialTapTargetSize:
                               MaterialTapTargetSize.shrinkWrap,
                           value: rememberMe,
@@ -158,8 +159,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(
                           'Beni Hatırla',
                           style: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary,
-                              fontFamily: 'Roboto-Medium.ttf'),
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
@@ -175,7 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: const Text(
                         'Şifremi unuttum',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.blue),
+                            fontWeight: FontWeight.bold, color: Colors.white),
                       ),
                     )
                   ],
@@ -183,33 +184,32 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                //sign in button
+
                 MyButton(
                   onTap: () {
-                    // Giriş yap butonuna tıklandığında
                     if (rememberMe) {
                       _saveUserCredentials();
                     }
                     signIn();
                   },
-                  text: 'Giriş Yap',
-                  semanticsLabel: 'Giriş Yap',
+                  text: 'Giriş',
+                  semanticsLabel: 'Giriş',
                 ),
                 const SizedBox(height: 20),
-                //go to register page
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Hesabınız yok mu? ',
-                      style: TextStyle(color: Colors.grey[700]),
+                      style: TextStyle(color: Colors.white),
                     ),
                     GestureDetector(
                       onTap: widget.onTap,
                       child: const Text(
-                        'Kayıt ol',
+                        'Kaydol',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.blue),
+                            fontWeight: FontWeight.bold, color: Colors.white),
                       ),
                     ),
                   ],
@@ -222,15 +222,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const AuthPage(),
+                          builder: (context) => RecipeHomePage(),
                         ),
                       );
                     }
                   },
-                  child: Text('Misafir girişi için tıklayınız.',
+                  child: const Text('Misafir girişi için tıklayınız.',
                       style: TextStyle(
-                        color: Colors.blue,
-                        fontFamily: 'Roboto-Medium.ttf',
+                        color: Colors.white,
+                        fontFamily: '',
                       )),
                 )
               ],

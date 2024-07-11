@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 
 class MyTextField extends StatefulWidget {
   final TextEditingController controller;
-  final String labeltext;
+  final String hintText;
   bool obscureText;
   final IconData? suffixIcon;
   final bool isLogin;
 
-  MyTextField(
-      {super.key,
-      required this.controller,
-      required this.labeltext,
-      required this.obscureText,
-      this.isLogin = false,
-      this.suffixIcon});
+  MyTextField({
+    super.key,
+    required this.controller,
+    required this.hintText,
+    required this.obscureText,
+    this.isLogin = false,
+    this.suffixIcon,
+  });
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
@@ -21,6 +22,13 @@ class MyTextField extends StatefulWidget {
 
 class _MyTextFieldState extends State<MyTextField> {
   bool isObscured = true;
+
+  @override
+  void initState() {
+    super.initState();
+    isObscured = widget.obscureText;
+  }
+
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -28,40 +36,33 @@ class _MyTextFieldState extends State<MyTextField> {
         color: Theme.of(context).colorScheme.secondary,
       ),
       controller: widget.controller,
-      obscureText: widget.obscureText,
+      obscureText: isObscured,
       cursorColor: Theme.of(context).colorScheme.onPrimaryContainer,
       decoration: InputDecoration(
-        labelText: widget.labeltext,
-        labelStyle: TextStyle(
-            color: Theme.of(context)
-                .colorScheme
-                .secondary // Burası odaklanılmadığında etiket rengi
-            ),
-        floatingLabelBehavior:
-            FloatingLabelBehavior.always, // Etiket her zaman görünür
-        // Etkin olmayan durum için alt çizgi rengi:
-        enabledBorder: UnderlineInputBorder(
-          borderSide:
-              BorderSide(color: Theme.of(context).colorScheme.onPrimary),
+        hintText: widget.hintText,
+        hintStyle: TextStyle(
+          color: Colors.grey[600], // Placeholder color
         ),
-        // Odaklanıldığında alt çizgi rengi:
-        focusedBorder: UnderlineInputBorder(
+        filled: true,
+        fillColor: Colors.white,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide(color: Colors.grey.shade400),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
           borderSide:
               BorderSide(color: Theme.of(context).colorScheme.secondary),
         ),
         suffixIcon: widget.isLogin
             ? IconButton(
                 icon: Icon(
-                  isObscured
-                      ? Icons.visibility_off
-                      : Icons.visibility, // İkon durumunu güncelle
-                  color:
-                      Theme.of(context).colorScheme.secondary, // İkonun rengi
+                  isObscured ? Icons.visibility_off : Icons.visibility,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 onPressed: () {
                   setState(() {
-                    isObscured = !isObscured; // Şifre görünürlüğünü değiştir
-                    widget.obscureText = !widget.obscureText;
+                    isObscured = !isObscured;
                   });
                 },
               )

@@ -1,10 +1,20 @@
+import 'package:bootcamp_group_14/pages/auth/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class RecipeHomePage extends StatefulWidget {
   @override
   _RecipeHomePageState createState() => _RecipeHomePageState();
+}
+
+void signOut(BuildContext context) async {
+  await FirebaseAuth.instance.signOut();
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => const AuthPage()),
+  );
 }
 
 class _RecipeHomePageState extends State<RecipeHomePage> {
@@ -44,6 +54,12 @@ class _RecipeHomePageState extends State<RecipeHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () => signOut(context),
+          ),
+        ],
         title: Text(
           'Ana Sayfa',
           style: GoogleFonts.raleway(

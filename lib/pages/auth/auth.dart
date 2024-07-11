@@ -1,5 +1,5 @@
+import 'package:bootcamp_group_14/home_page.dart';
 import 'package:bootcamp_group_14/pages/auth/login_or_register.dart';
-import 'package:bootcamp_group_14/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -15,7 +15,7 @@ class AuthPage extends StatelessWidget {
         builder: (context, snapshot) {
           //Kullanıcı giriş yapabildiğinde
           if (snapshot.hasData) {
-            return const HomeScreen();
+            return RecipeHomePage();
           }
           //Kullanıcı giriş yapamağında
           else {

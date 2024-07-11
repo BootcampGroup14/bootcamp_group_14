@@ -23,16 +23,14 @@ class MyButton extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.onPrimaryContainer,
+            color: Colors.green.shade800,
             borderRadius: BorderRadius.circular(8),
           ),
           child: Center(
             child: Text(
               text,
               style: const TextStyle(
-                  fontFamily: "Roboto-Medium.tff",
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(204, 204, 204, 1)),
+                  fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ),
         ),
