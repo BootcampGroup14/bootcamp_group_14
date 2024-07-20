@@ -158,9 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Text(
                           'Beni Hatırla',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ],
                     ),
@@ -176,7 +174,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: const Text(
                         'Şifremi unuttum',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white),
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 16),
                       ),
                     )
                   ],
@@ -202,14 +202,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Text(
                       'Hesabınız yok mu? ',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                     GestureDetector(
                       onTap: widget.onTap,
                       child: const Text(
                         'Kaydol',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white),
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 16),
                       ),
                     ),
                   ],
@@ -230,6 +232,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: const Text('Misafir girişi için tıklayınız.',
                       style: TextStyle(
                         color: Colors.white,
+                        fontSize: 16,
                         fontFamily: '',
                       )),
                 )

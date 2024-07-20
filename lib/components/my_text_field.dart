@@ -46,11 +46,11 @@ class _MyTextFieldState extends State<MyTextField> {
         filled: true,
         fillColor: Colors.white,
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide(color: Colors.grey.shade400),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(14),
           borderSide:
               BorderSide(color: Theme.of(context).colorScheme.secondary),
         ),

@@ -51,59 +51,61 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ConstrainedBox(
-              constraints: const BoxConstraints(
-                //maxHeight:120, // Yüksekliği logonuzun boyutuna göre ayarlayın
-                maxWidth: 120,
-              ),
-              child: Image.asset(
-                'assets/QuestifyLogo-05.png', // Dosya adınızı doğru bir şekilde girin
-                fit: BoxFit.contain,
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/Login.png'),
+                fit: BoxFit.cover,
               ),
             ),
-            const SizedBox(height: 30),
-            Container(
-              width: double.infinity,
-              child: Text(
-                'Şifrenizi sıfırlamak için e-mail adresinizi girin',
-                semanticsLabel:
-                    'Şifrenizi sıfırlamak için e-mail adresinizi girin',
-                style: TextStyle(
-                    fontFamily: 'Roboto-Regular',
-                    fontSize: 16,
-                    color: Theme.of(context).colorScheme.onPrimaryContainer),
-              ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 30),
+                const SizedBox(
+                  width: double.infinity,
+                  child: Text(
+                      'Şifrenizi sıfırlamak için e-mail adresinizi girin',
+                      semanticsLabel:
+                          'Şifrenizi sıfırlamak için e-mail adresinizi girin',
+                      style: TextStyle(
+                        fontFamily: 'Roboto-Regular',
+                        fontSize: 16,
+                        color: Colors.white,
+                      )),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                MyTextField(
+                  controller: _forgotPassTextController,
+                  hintText: 'E-mail',
+                  obscureText: false,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                MyButton(
+                    onTap: resetPassword,
+                    text: 'Şifremi Sıfırla',
+                    semanticsLabel: 'Şifremi Sıfırla'),
+                const SizedBox(
+                  height: 10,
+                ),
+              ],
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            MyTextField(
-              controller: _forgotPassTextController,
-              hintText: 'E-mail',
-              obscureText: false,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            MyButton(
-                onTap: resetPassword,
-                text: 'Şifremi Sıfırla',
-                semanticsLabel: 'Şifremi Sıfırla'),
-            const SizedBox(
-              height: 10,
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
