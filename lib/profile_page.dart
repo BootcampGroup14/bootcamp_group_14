@@ -1,9 +1,27 @@
+import 'package:bootcamp_group_14/camera_screen.dart';
 import 'package:bootcamp_group_14/profile_edit_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:camera/camera.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
+  @override
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  late List<CameraDescription> cameras;
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeCameras();
+  }
+
+  Future<void> _initializeCameras() async {
+    cameras = await availableCameras(); // Kameraları al
+    setState(() {}); // Durumu güncelle
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,55 +32,55 @@ class ProfilePage extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(20),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ProfileEditPage()),
-                  );
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.3),
-                        spreadRadius: 2,
-                        blurRadius: 8,
-                        offset: Offset(0, 5),
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        'assets/images/profile_images/default_avatar.png',
-                        width: 50,
-                        height: 50,
-                      ),
-                      SizedBox(width: 20),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Group14',
-                            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            '@kullanıcıGroup14',
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+            padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(20),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfileEditPage()),
+                );
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 2,
+                      blurRadius: 8,
+                      offset: Offset(0, 5),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/images/profile_images/default_avatar.png',
+                      width: 50,
+                      height: 50,
+                    ),
+                    SizedBox(width: 20),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Group14',
+                          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          '@kullanıcıGroup14',
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),
+          ),
           Expanded(
             child: ListView(
               padding: EdgeInsets.all(16),
@@ -138,7 +156,14 @@ class ProfilePage extends StatelessWidget {
       floatingActionButton: Visibility(
         child: FloatingActionButton(
           onPressed: () {
-            // Kamera açma işlemleri yapılacak.
+            if (cameras.isNotEmpty) { // Kameralar mevcutsa geçiş yap
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CameraScreen(camera: cameras.first),
+                ),
+              );
+            }
           },
           child: Icon(Icons.camera_alt),
           backgroundColor: Colors.grey[300],
