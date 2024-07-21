@@ -205,7 +205,7 @@
       <div>
         Sprint 2 - App Ekran Görüntüleri
         <div>
-        <img src="https://i.ibb.co/2k0W3kh/Screenshot-2024-07-17-094743.png" alt="Screenshot-2024-07-17-094743" border="0" />
+        <img src="https://i.ibb.co/tqKdVgX/Screenshot-2024-07-21-212518.png" alt="Screenshot-2024-07-21-212518" border="0" />
         <img src="https://i.ibb.co/7XDGcrk/Screenshot-2024-07-21-212435.png" alt="Screenshot-2024-07-21-212435" border="0" />
         <img src="https://i.ibb.co/q7D4j97/Screenshot-2024-07-21-212447.png" alt="Screenshot-2024-07-21-212447" border="0" />
         <img src="https://i.ibb.co/Ct027xc/Screenshot-2024-07-21-212501.png" alt="Screenshot-2024-07-21-212501" border="0" />
