@@ -1,5 +1,5 @@
-import 'package:bootcamp_group_14/pages/auth/auth_pages/login_screen.dart';
-import 'package:bootcamp_group_14/pages/auth/auth_pages/register_screen.dart';
+import 'package:bootcamp_group_14/auth/auth_pages/login_screen.dart';
+import 'package:bootcamp_group_14/auth/auth_pages/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginOrRegister extends StatefulWidget {

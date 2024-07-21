@@ -1,11 +1,11 @@
 import 'package:bootcamp_group_14/components/my_button.dart';
 import 'package:bootcamp_group_14/components/my_text_field.dart';
-import 'package:bootcamp_group_14/home_page.dart';
-import 'package:bootcamp_group_14/pages/auth/forgot_password.dart';
+import 'package:bootcamp_group_14/pages/home_screen.dart';
+import 'package:bootcamp_group_14/auth/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:bootcamp_group_14/pages/auth/auth.dart';
-import 'package:bootcamp_group_14/pages/auth/sing_in_anonymosly.dart/sign_in_any.dart';
+import 'package:bootcamp_group_14/auth/auth.dart';
+import 'package:bootcamp_group_14/auth/sing_in_anonymosly.dart/sign_in_any.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
