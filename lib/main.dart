@@ -1,6 +1,12 @@
+import 'package:bootcamp_group_14/home_page.dart';
 import 'package:bootcamp_group_14/pages/splash_screen.dart';
 import 'package:bootcamp_group_14/profile_page.dart';
 import 'package:bootcamp_group_14/saved_page.dart';
+import 'package:bootcamp_group_14/profile_diete.dart';
+import 'package:bootcamp_group_14/profile_edit_page.dart';
+import 'package:bootcamp_group_14/saved_page.dart';
+import 'package:bootcamp_group_14/settings_page.dart';
+import 'package:bootcamp_group_14/sifremiUnuttum.dart';
 import 'package:bootcamp_group_14/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +34,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'NeYesek?',
       theme: themeProvider.themeData,
-      home: RecipeDetailScreen(),
+      home: SplashScreen(),
     );
   }
 }
