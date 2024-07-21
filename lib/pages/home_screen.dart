@@ -1,4 +1,4 @@
-import 'package:bootcamp_group_14/pages/auth/auth.dart';
+import 'package:bootcamp_group_14/auth/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -56,7 +56,7 @@ class _RecipeHomePageState extends State<RecipeHomePage> {
       appBar: AppBar(
         actions: [
           IconButton(
-            icon: const Icon(Icons.logout),
+            icon: const Icon(Icons.logout,),
             onPressed: () => signOut(context),
           ),
         ],

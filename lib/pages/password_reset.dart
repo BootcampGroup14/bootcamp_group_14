@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SifremiUnuttumSayfasi extends StatefulWidget {
-  const SifremiUnuttumSayfasi({super.key});
+class ChangePassword extends StatefulWidget {
+  const ChangePassword({super.key});
 
   @override
-  State<SifremiUnuttumSayfasi> createState() => _SifremiUnuttumSayfasiState();
+  State<ChangePassword> createState() => _ChangePasswordState();
 }
 
-class _SifremiUnuttumSayfasiState extends State<SifremiUnuttumSayfasi> {
+class _ChangePasswordState extends State<ChangePassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

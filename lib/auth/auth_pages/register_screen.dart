@@ -1,5 +1,5 @@
 import 'package:bootcamp_group_14/components/my_button.dart';
-import 'package:bootcamp_group_14/home_page.dart';
+import 'package:bootcamp_group_14/pages/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

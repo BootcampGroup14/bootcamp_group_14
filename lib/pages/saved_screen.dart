@@ -22,20 +22,6 @@ class SavedRecipesPage extends StatelessWidget {
             fontSize: 24,
           ),
         ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // Handle search action
-            },
-          ),
-        ],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(120),
           child: Column(
@@ -52,7 +38,8 @@ class SavedRecipesPage extends StatelessWidget {
                       prefixIcon: Icon(Icons.search),
                       hintText: 'Arama',
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     ),
                     onChanged: (value) {
                       // Implement search logic here
@@ -100,7 +87,8 @@ class SavedRecipesPage extends StatelessWidget {
                 // Navigate to recipe details page
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => RecipeDetailsPage(recipe: savedRecipes[index]),
+                    builder: (context) =>
+                        RecipeDetailsPage(recipe: savedRecipes[index]),
                   ),
                 );
               },
