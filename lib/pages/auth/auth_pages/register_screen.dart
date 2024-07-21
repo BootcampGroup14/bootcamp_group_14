@@ -22,12 +22,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final passowordTextController = TextEditingController();
   final passowordConfirmTextController = TextEditingController();
   final userNameTextController = TextEditingController();
-  final nameSurnameTextController = TextEditingController();
   bool isObscured = true;
   bool isObscuredConfirm = true;
   Gender? selectedGender;
   String selectedGenderText = '';
-  bool _kvkk = false;
   bool _isClicked = false;
   //kayıt olma
   String getFirebaseAuthErrorMessage(String errorCode, BuildContext context) {
@@ -51,18 +49,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: CircularProgressIndicator(),
       ),
     );
-    if (!_kvkk) {
-      Navigator.pop(context);
-      ScaffoldMessenger.of(context).showSnackBar(
-        //Hata mesajı göster
-        displayMessage('KVKK\'yı kabul etmeniz gerekmektedir.'),
-      );
-      setState(() {
-        _isClicked = false;
-      });
-
-      return;
-    }
     //Şifre eşleşme kontrolü
     if (passowordTextController.text != passowordConfirmTextController.text) {
       //yükleme ekranını kapama
@@ -108,9 +94,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
               .doc(userCredential.user!.email!.trim())
               .set({
             'username': userNameTextController.text,
-            'name_surname': nameSurnameTextController.text,
-            'bio': ' ',
-            'gender': selectedGenderText,
           });
           //Kullanıcı Adı Listesi Ekleme
           DocumentReference postRef = FirebaseFirestore.instance
@@ -222,7 +205,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     getDocumentData();
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -236,119 +218,82 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Center(
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 18),
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 150),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      //logo
-                      ConstrainedBox(
-                        constraints: const BoxConstraints(
-                          //maxHeight:120, // Yüksekliği logonuzun boyutuna göre ayarlayın
-                          maxWidth: 120,
-                        ),
-                        child: Image.asset(
-                          'assets/splash_screen_red.jpg', // Dosya adınızı doğru bir şekilde girin
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Text(
-                        'K A Y I T   O L',
+                      const Text(
+                        'KAYIT',
                         style: TextStyle(
                             fontFamily: 'Roboto-Medium',
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onPrimaryContainer),
+                            color: Colors.white),
                       ),
                       const SizedBox(height: 25),
+                      const Text(
+                        'Hesap oluşturmak için lütfen detayları doldurun.',
+                        style: TextStyle(
+                            fontFamily: 'Roboto-Medium',
+                            fontSize: 16,
+                            color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
                       // username textfield
-                      TextField(
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontFamily: 'Roboto-Medium',
-                        ),
-                        controller: userNameTextController,
-                        onChanged: (value) => controlUsername(value),
-                        cursorColor:
-                            Theme.of(context).colorScheme.onPrimaryContainer,
-                        decoration: InputDecoration(
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .onPrimary, // Normal durumda alt çizgi rengi
-                            ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(14)),
+                        child: TextField(
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto-Medium',
                           ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: usernameControlValue == 1
-                                  ? Colors.green
-                                  : Theme.of(context)
-                                      .colorScheme
-                                      .secondary, // Odaklanıldığında alt çizgi rengi
-                            ),
-                          ),
-                          errorBorder: const UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color:
-                                  Colors.red, // Hata durumunda alt çizgi rengi
-                            ),
-                          ),
-                          focusedErrorBorder: const UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors
-                                  .red, // Odaklanıldığında ve hata varsa alt çizgi rengi
-                            ),
-                          ),
-                          errorText: usernameControlValue == 2
-                              ? 'Kullanıcı adı mevcut'
-                              : null, // Hata mesajı
-                          labelText: 'Kullanıcı Adı',
-                          labelStyle: TextStyle(
-                            color: Theme.of(context).colorScheme.secondary,
-                          ),
-                          fillColor: Colors.transparent,
-                          filled: true,
-                        ),
-                      ),
-
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      //Ad Soyad
-                      TextField(
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontFamily: 'Roboto-Medium',
-                        ),
-                        controller: nameSurnameTextController,
-                        onChanged: (value) {},
-                        cursorColor:
-                            Theme.of(context).colorScheme.onPrimaryContainer,
-                        decoration: InputDecoration(
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
+                          controller: userNameTextController,
+                          onChanged: (value) => controlUsername(value),
+                          cursorColor:
+                              Theme.of(context).colorScheme.onPrimaryContainer,
+                          decoration: InputDecoration(
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
                                 color: Theme.of(context)
                                     .colorScheme
-                                    .onPrimary), // Normal durumda alt çizgi rengi
+                                    .onPrimary, // Normal durumda alt çizgi rengi
+                              ),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: usernameControlValue == 1
+                                    ? Colors.green
+                                    : Theme.of(context)
+                                        .colorScheme
+                                        .secondary, // Odaklanıldığında alt çizgi rengi
+                              ),
+                            ),
+                            errorBorder: const UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors
+                                    .red, // Hata durumunda alt çizgi rengi
+                              ),
+                            ),
+                            focusedErrorBorder: const UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors
+                                    .red, // Odaklanıldığında ve hata varsa alt çizgi rengi
+                              ),
+                            ),
+                            errorText: usernameControlValue == 2
+                                ? 'Kullanıcı adı mevcut'
+                                : null, // Hata mesajı
+                            hintText: 'Ad Soyad',
+                            labelStyle: TextStyle(
+                              color: Theme.of(context).colorScheme.secondary,
+                            ),
+                            fillColor: Colors.transparent,
+                            filled: true,
                           ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .secondary), // Odaklanıldığında alt çizgi rengi
-                          ),
-                          labelText: 'Ad Soyad',
-                          labelStyle: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary),
-                          fillColor: Colors.transparent,
-                          filled: true, // Arka plan doldurulmasın
                         ),
                       ),
 
@@ -356,255 +301,174 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         height: 10,
                       ),
                       //email texfield
-                      TextField(
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontFamily: 'Roboto-Medium',
-                        ),
-                        cursorColor:
-                            Theme.of(context).colorScheme.onPrimaryContainer,
-                        controller: emailTextController,
-                        onChanged: (value) => controlEmail(value),
-                        decoration: InputDecoration(
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          labelText: 'E-mail',
-                          labelStyle: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary),
-                          errorText:
-                              emailControlValue == 0 || emailControlValue == 2
-                                  ? null
-                                  : 'Geçerli bir e-mail adresi giriniz.',
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: emailControlValue == 0
-                                  ? Theme.of(context).colorScheme.onPrimary
-                                  : emailControlValue == 1
-                                      ? Colors.red
-                                      : Colors.green,
-                            ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(14)),
+                        child: TextField(
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontFamily: 'Roboto-Medium',
                           ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: emailControlValue == 0
-                                  ? Theme.of(context).colorScheme.secondary
-                                  : emailControlValue == 1
-                                      ? Colors.red
-                                      : Colors.green,
+                          cursorColor:
+                              Theme.of(context).colorScheme.onPrimaryContainer,
+                          controller: emailTextController,
+                          onChanged: (value) => controlEmail(value),
+                          decoration: InputDecoration(
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            hintText: 'E-mail',
+                            labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.secondary),
+                            errorText:
+                                emailControlValue == 0 || emailControlValue == 2
+                                    ? null
+                                    : 'Geçerli bir e-mail adresi giriniz.',
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: emailControlValue == 0
+                                    ? Theme.of(context).colorScheme.onPrimary
+                                    : emailControlValue == 1
+                                        ? Colors.red
+                                        : Colors.green,
+                              ),
                             ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: emailControlValue == 0
+                                    ? Theme.of(context).colorScheme.secondary
+                                    : emailControlValue == 1
+                                        ? Colors.red
+                                        : Colors.green,
+                              ),
+                            ),
+                            fillColor: Colors
+                                .transparent, // Arka plan rengi transparan olarak ayarlandı
+                            filled: true,
                           ),
-                          fillColor: Colors
-                              .transparent, // Arka plan rengi transparan olarak ayarlandı
-                          filled: true,
                         ),
                       ),
                       const SizedBox(
                         height: 10,
                       ),
                       //password texfield
-                      TextField(
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontFamily: 'Roboto-Medium',
-                        ),
-                        cursorColor:
-                            Theme.of(context).colorScheme.onPrimaryContainer,
-                        controller: passowordTextController,
-                        obscureText: isObscured,
-                        decoration: InputDecoration(
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          suffixIcon: IconButton(
-                            icon: Icon(
-                              isObscured
-                                  ? Icons.visibility_off
-                                  : Icons.visibility, // İkon durumunu güncelle
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondary, // İkonun rengi
-                            ),
-                            onPressed: () {
-                              setState(() {
-                                isObscured =
-                                    !isObscured; // Şifre görünürlüğünü değiştir
-                              });
-                            },
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Theme.of(context).colorScheme.onPrimary,
-                            ), // Normal durumda alt çizgi rengi
-                          ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Theme.of(context).colorScheme.secondary,
-                            ), // Odaklanıldığında alt çizgi rengi
-                          ),
-                          labelText:
-                              'Şifre', // hintText yerine labelText kullan
-                          labelStyle: TextStyle(
-                            color: Theme.of(context).colorScheme.secondary,
-                          ),
-                          fillColor: Colors.transparent,
-                          filled: true, // Arka plan doldurulmasın
-                        ),
-                      ),
-
-                      const SizedBox(height: 10),
-                      //passord confirm textfield
-                      TextField(
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontFamily: 'Roboto-Medium',
-                        ),
-                        cursorColor:
-                            Theme.of(context).colorScheme.onPrimaryContainer,
-                        controller: passowordConfirmTextController,
-                        obscureText: isObscuredConfirm,
-                        decoration: InputDecoration(
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          suffixIcon: IconButton(
-                            icon: Icon(
-                              isObscuredConfirm
-                                  ? Icons.visibility_off
-                                  : Icons.visibility,
-                              color: Theme.of(context).colorScheme.secondary,
-                            ),
-                            onPressed: () {
-                              setState(() {
-                                isObscuredConfirm = !isObscuredConfirm;
-                              });
-                            },
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Theme.of(context).colorScheme.onPrimary),
-                          ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Theme.of(context).colorScheme.secondary),
-                          ),
-                          labelText:
-                              'Şifre Doğrulama', // hintText yerine labelText kullan
-                          labelStyle: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary),
-                          fillColor: Colors.transparent,
-                          filled: true, // Arka plan doldurulmasın
-                        ),
-                      ),
-
-                      DropdownButtonFormField<Gender>(
-                        decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .onPrimary))),
-                        isExpanded: true,
-                        dropdownColor:
-                            Theme.of(context).colorScheme.onBackground,
-                        padding: const EdgeInsets.symmetric(vertical: 6),
-                        style: TextStyle(
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontFamily: 'Roboto-Medium'),
-                        hint: Text(
-                          '   Cinsiyet Seçiniz',
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(14)),
+                        child: TextField(
                           style: TextStyle(
-                              fontSize: 13,
-                              color: Theme.of(context).colorScheme.secondary,
-                              fontFamily: 'Roboto-Medium'),
-                        ),
-                        value: selectedGender,
-                        onChanged: (Gender? value) {
-                          if (value != null) {
-                            setState(() {
-                              selectedGender = value;
-                              switch (selectedGender.toString().substring(7)) {
-                                case 'Erkek':
-                                  selectedGenderText = 'Erkek';
-                                  break;
-                                case 'Kadin':
-                                  selectedGenderText = 'Kadın';
-                                  break;
-                                case 'Diger':
-                                  selectedGenderText = 'Belirtmek istemiyorum';
-                                  break;
-                              }
-                            });
-                          }
-                        },
-                        items: const [
-                          DropdownMenuItem(
-                            value: Gender.Erkek,
-                            child: Text('Erkek'),
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontFamily: 'Roboto-Medium',
                           ),
-                          DropdownMenuItem(
-                            value: Gender.Kadin,
-                            child: Text('Kadın'),
-                          ),
-                          DropdownMenuItem(
-                            value: Gender.Diger,
-                            child: Text('Belirtmek istemiyorum.'),
-                          ),
-                        ],
-                      ),
-
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      //KVKK
-                      Row(
-                        children: [
-                          Checkbox(
-                              checkColor:
-                                  Theme.of(context).colorScheme.onBackground,
-                              activeColor:
-                                  Theme.of(context).colorScheme.secondary,
-                              value: _kvkk,
-                              onChanged: (value) {
+                          cursorColor:
+                              Theme.of(context).colorScheme.onPrimaryContainer,
+                          controller: passowordTextController,
+                          obscureText: isObscured,
+                          decoration: InputDecoration(
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                isObscured
+                                    ? Icons.visibility_off
+                                    : Icons
+                                        .visibility, // İkon durumunu güncelle
+                                color: Colors.black, // İkonun rengi
+                              ),
+                              onPressed: () {
                                 setState(() {
-                                  _kvkk = value!;
+                                  isObscured =
+                                      !isObscured; // Şifre görünürlüğünü değiştir
                                 });
-                              }),
-                          Flexible(
-                            child: RichText(
-                                text: TextSpan(
-                                    style: TextStyle(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondary), // Default text color
-                                    children: <TextSpan>[
-                                  const TextSpan(
-                                      text:
-                                          "Onay kutusunu işaretleyerek bize kişisel bilgilerinizi göndermeyi kabul ediyorsunuz.",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
-                                  const TextSpan(
-                                      text:
-                                          '\nKVKK aydınlatma metnini okumak için '),
-                                  TextSpan(
-                                    text: 'tıklayınız.',
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.blue),
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                RecipeHomePage(),
-                                          ),
-                                        );
-                                      },
-                                  ),
-                                ])),
+                              },
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ), // Normal durumda alt çizgi rengi
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Theme.of(context).colorScheme.secondary,
+                              ), // Odaklanıldığında alt çizgi rengi
+                            ),
+                            hintText: 'Şifre',
+                            labelStyle: TextStyle(
+                              color: Theme.of(context).colorScheme.secondary,
+                            ),
+                            fillColor: Colors.transparent,
+                            filled: true, // Arka plan doldurulmasın
                           ),
-                        ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Şifreniz 6 karakterli olmalı.',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+
+                      const SizedBox(height: 5),
+                      //passord confirm textfield
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(14)),
+                        child: TextField(
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontFamily: 'Roboto-Medium',
+                          ),
+                          cursorColor:
+                              Theme.of(context).colorScheme.onPrimaryContainer,
+                          controller: passowordConfirmTextController,
+                          obscureText: isObscuredConfirm,
+                          decoration: InputDecoration(
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                isObscuredConfirm
+                                    ? Icons.visibility_off
+                                    : Icons.visibility,
+                                color: Colors.black,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  isObscuredConfirm = !isObscuredConfirm;
+                                });
+                              },
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color:
+                                      Theme.of(context).colorScheme.secondary),
+                            ),
+                            hintText: 'Şifre Doğrulama',
+                            labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.secondary),
+                            fillColor: Colors.transparent,
+                            filled: true,
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-
                       //sign in button
                       !_isClicked
                           ? MyButton(
@@ -623,9 +487,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'Üye misin? ',
-                            style: TextStyle(color: Colors.grey[700]),
+                          const Text(
+                            'Bir hesabınız var mı? ',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                           Semantics(
                             button: true,
@@ -635,8 +499,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               child: const Text(
                                 'Giriş yap',
                                 style: TextStyle(
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.blue),
+                                    color: Colors.white),
                               ),
                             ),
                           )
