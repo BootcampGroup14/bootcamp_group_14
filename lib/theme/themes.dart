@@ -5,7 +5,7 @@ ThemeData darkTheme = ThemeData(
         primary: Color(0xFF3DA0A7),
         secondary: Color(0xFF1A2030),
    ),
-  backgroundColor: Color(0xFF657B9A1A),
+  // backgroundColor: Color(0xFF657B9A1A),
   appBarTheme: AppBarTheme(
     iconTheme: IconThemeData(color: Color(0xFFF7F7F9)),
     backgroundColor: Color(0xFF020818),
@@ -17,8 +17,8 @@ ThemeData darkTheme = ThemeData(
     buttonColor: Color(0xFF3DA0A7),
   ),
   textTheme: TextTheme(
-    bodyText1: TextStyle(color: Colors.white),
-    bodyText2: TextStyle(color: Color(0xFFFFFFFF)),
+   // bodyText1: TextStyle(color: Colors.white),
+   // bodyText2: TextStyle(color: Color(0xFFFFFFFF)),
   ),
   navigationBarTheme: NavigationBarThemeData(
     backgroundColor: Color(0xFF1A2030),
@@ -47,13 +47,13 @@ ThemeData lightTheme = ThemeData(
       color: Color(0xFF0A2533),
     ),
   ),
-    backgroundColor: Color(0xFF3DA0A7),
+   // backgroundColor: Color(0xFF3DA0A7),
   buttonTheme: ButtonThemeData(
     buttonColor: Color(0xFF042628),
   ),
   textTheme: TextTheme(
-    bodyText1: TextStyle(color: Colors.white),
-    bodyText2: TextStyle(color: Color(0xFF0A2533)),
+    // bodyText1: TextStyle(color: Colors.white),
+   // bodyText2: TextStyle(color: Color(0xFF0A2533)),
   ),
   navigationBarTheme: NavigationBarThemeData(
     backgroundColor: Colors.white,

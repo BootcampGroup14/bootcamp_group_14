@@ -1,6 +1,8 @@
 import 'package:bootcamp_group_14/home_page.dart';
 import 'package:bootcamp_group_14/pages/splash_screen.dart';
+import 'package:bootcamp_group_14/profile_health.dart';
 import 'package:bootcamp_group_14/profile_page.dart';
+import 'package:bootcamp_group_14/profile_preferences.dart';
 import 'package:bootcamp_group_14/saved_page.dart';
 import 'package:bootcamp_group_14/profile_diete.dart';
 import 'package:bootcamp_group_14/profile_edit_page.dart';
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'NeYesek?',
       theme: themeProvider.themeData,
-      home: SplashScreen(),
+      home: ProfilePreferences(),
     );
   }
 }
