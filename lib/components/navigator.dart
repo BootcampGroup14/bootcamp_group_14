@@ -1,5 +1,6 @@
 import 'package:bootcamp_group_14/pages/camera_screen.dart';
 import 'package:bootcamp_group_14/pages/home_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_health_screen.dart';
 import 'package:bootcamp_group_14/pages/profile_screen.dart';
 import 'package:bootcamp_group_14/pages/saved_screen.dart';
 import 'package:bootcamp_group_14/pages/settings_screen.dart';
@@ -28,8 +29,8 @@ class _MainNavigatorState extends State<MainNavigator> {
     _pages = [
       RecipeHomePage(),
       SavedRecipesPage(),
-      const Camera_Screen(),
-      SettingsPage(),
+      ProfileHealth(),
+      const SettingsPage(),
       ProfilePage(),
     ];
   }

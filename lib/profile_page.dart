@@ -1,5 +1,5 @@
-import 'package:bootcamp_group_14/camera_screen.dart';
-import 'package:bootcamp_group_14/profile_edit_page.dart';
+import 'package:bootcamp_group_14/pages/camera_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_edit_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 

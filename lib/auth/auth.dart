@@ -16,7 +16,7 @@ class AuthPage extends StatelessWidget {
         builder: (context, snapshot) {
           //Kullanıcı giriş yapabildiğinde
           if (snapshot.hasData) {
-            return const MainNavigator();
+            return MainNavigator();
           }
           //Kullanıcı giriş yapamağında
           else {
