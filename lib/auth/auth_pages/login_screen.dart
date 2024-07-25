@@ -99,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     maxWidth: 120,
                   ),
                   child: Image.asset(
-                    'assets/splash_screen_red.jpg',
+                    'assets/NeYesekLogo.png',
                     fit: BoxFit.contain,
                   ),
                 ),

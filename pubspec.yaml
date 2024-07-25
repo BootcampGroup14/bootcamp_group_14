@@ -43,6 +43,10 @@ flutter:
     - assets/splash_screen_white.jpg
     - assets/images/profile_diet_images/
     - assets/images/profile_health_images/
+    - assets/logobeyaz.png
+    - assets/NeYesekLogo.png
+    - assets/LOGO.png
+    - assets/splashScreenBg.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
