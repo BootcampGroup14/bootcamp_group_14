@@ -296,26 +296,20 @@
     </div>
   </div>
   <div class="row d-flex flex-column">
-    <h2>Sprint 2</h2>
+    <h2>Sprint 3</h2>
     <div class="row">
       <div>
-        Sprint 2 - App Ekran Görüntüleri
+        Sprint 3 - App Ekran Görüntüleri
         <div>
-        <img src="https://i.ibb.co/tqKdVgX/Screenshot-2024-07-21-212518.png" alt="Screenshot-2024-07-21-212518" border="0" />
-        <img src="https://i.ibb.co/7XDGcrk/Screenshot-2024-07-21-212435.png" alt="Screenshot-2024-07-21-212435" border="0" />
-        <img src="https://i.ibb.co/q7D4j97/Screenshot-2024-07-21-212447.png" alt="Screenshot-2024-07-21-212447" border="0" />
-        <img src="https://i.ibb.co/Ct027xc/Screenshot-2024-07-21-212501.png" alt="Screenshot-2024-07-21-212501" border="0" />
-        <img src="https://i.ibb.co/6wCB2MQ/Screenshot-2024-07-21-212537.png" alt="Screenshot-2024-07-21-212537" border="0" />
-        <img src="https://i.ibb.co/Rv2hFX2/Screenshot-2024-07-21-212549.png" alt="Screenshot-2024-07-21-212549" border="0" />
-        <img src="https://i.ibb.co/Z60BXy1/Screenshot-2024-07-21-212600.png" alt="Screenshot-2024-07-21-212600" border="0" />
-        <img src="https://i.ibb.co/yWhD7Ww/Screenshot-2024-07-21-212609.png" alt="Screenshot-2024-07-21-212609" border="0" />
-        <img src="https://i.ibb.co/D1WSpNF/Screenshot-2024-07-21-212625.png" alt="Screenshot-2024-07-21-212625" border="0" />
-        <img src="https://i.ibb.co/MhRyS9T/Screenshot-2024-07-21-212632.png" alt="Screenshot-2024-07-21-212632" border="0" />
+        <img src="https://i.ibb.co/KrDsJyV/Ingredient-detect.png" alt="Screenshot-2024-07-21-212518" border="0" />
+        <img src="https://i.ibb.co/LSpvpp4/Ingredient-search.png" alt="Screenshot-2024-07-21-212435" border="0" />
+        <img src="https://i.ibb.co/QpGcZSs/Details-Scan-Ingredients.png" alt="Screenshot-2024-07-21-212447" border="0" />
+        <img src="https://i.ibb.co/vvLtNxk/Details-Scan-Ingredients-1.png" alt="Screenshot-2024-07-21-212501" border="0" />
         </div>
       </div>
       <div>
         Sprint 2 - Sprint Board Ekran Görüntüsü Güncellemeleri
-        <img src="https://i.ibb.co/jfKvcdL/Screenshot-2024-07-21-213505.png" alt="Screenshot-2024-07-21-213505" border="0" />
+        <img src="https://i.ibb.co/dcb2tKV/sprint3-trello.png" alt="Screenshot-2024-07-21-213505" border="0" />
       </div>
       <div>
         <h4>Sprint Notları</h4>
