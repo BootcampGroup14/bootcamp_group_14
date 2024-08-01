@@ -11,26 +11,46 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_fonts: ^6.2.1
-  font_awesome_flutter: ^10.1.0
-  camera: ^0.11.0+1
-  image_picker: ^1.1.2
-  path_provider: ^2.0.11
-  image_gallery_saver: ^2.0.3
-  cupertino_icons: ^1.0.6
+    
+  # UI ve Tasarım (UI)
+  google_fonts: ^6.2.1 
+  font_awesome_flutter: ^10.1.0 
+  flutter_svg: ^2.0.10+1 
+  curved_navigation_bar: ^1.0.6 
+  
+  # Kamera ve Görüntü İşleme (Camera & Image)
+  camera: ^0.11.0+1 
+  image_picker: ^1.1.2 
+  image_gallery_saver: ^2.0.3 
+  
+  # Veri Depolama ve Yönetim (Storage)
+  path_provider: ^2.0.11 
+  shared_preferences: ^2.2.3
+  flutter_dotenv: ^5.1.0
+
+  # Ağ ve API İstekleri (Networking)
+  http: ^1.2.2
+  
+  # Temel Flutter Bağımlılıkları (Core)
+  cupertino_icons: ^1.0.6 
+  google_generative_ai: ^0.4.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  cloud_firestore: ^5.0.2
-  firebase_auth: ^5.1.1
-  firebase_core: ^3.1.1
-  shared_preferences: ^2.2.3
-  flutter_lints: ^4.0.0
-  video_player: ^2.9.1
-  provider: ^6.1.2
-  flutter_svg: ^2.0.10+1
-  curved_navigation_bar: ^1.0.6
+  # Firebase Bağımlılıkları (Firebase)
+  cloud_firestore: ^5.0.2 
+  firebase_auth: ^5.1.1 
+  firebase_core: ^3.1.1 
+
+  # Durum Yönetimi (State Management)
+  provider: ^6.1.2 
+  
+  # Video Oynatma (Video)
+  video_player: ^2.9.1 
+  
+  # Geliştirme Araçları (Dev Tools)
+  flutter_lints: ^4.0.0 
 
 flutter:
   uses-material-design: true

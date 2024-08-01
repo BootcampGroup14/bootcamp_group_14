@@ -1,6 +1,6 @@
 import 'package:bootcamp_group_14/auth/auth.dart';
-import 'package:bootcamp_group_14/pages/password_reset.dart';
-import 'package:bootcamp_group_14/pages/profile_edit_page_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/password_reset_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_edit_page_screen.dart';
 import 'package:bootcamp_group_14/theme/theme_provider.dart';
 import 'package:bootcamp_group_14/theme/themes.dart';
 import 'package:flutter/material.dart';

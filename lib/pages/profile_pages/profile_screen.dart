@@ -1,11 +1,17 @@
-import 'package:bootcamp_group_14/pages/profile_edit_page_screen.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_diete_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_edit_page_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_health_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_meals.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final currentUser = FirebaseAuth.instance.currentUser;
     return Scaffold(
       appBar: AppBar(
         title: Text('Profil'),
@@ -49,12 +55,12 @@ class ProfilePage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Group14',
+                          currentUser!.email ?? 'Kullanıcı Adı',
                           style: TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          '@kullanıcıGroup14',
+                          currentUser.email ?? 'Kullanıcı Adı',
                           style: TextStyle(fontSize: 16, color: Colors.grey),
                         ),
                       ],
@@ -73,7 +79,10 @@ class ProfilePage extends StatelessWidget {
                     imagePath: 'assets/images/icons/heart-attack.png',
                     title: 'Sağlık Bilgileri',
                     onTap: () {
-                      // Sağlık bilgileri sayfasına yönlendirme yapılacak.
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfileHealth()));
                     },
                   ),
                 ),
@@ -82,7 +91,10 @@ class ProfilePage extends StatelessWidget {
                     imagePath: 'assets/images/icons/target.png',
                     title: 'Diyet ve Beslenme Hedefleri',
                     onTap: () {
-                      // Diyet ve beslenme hedefleri sayfasına yönlendirme yapılacak.
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfileDiete()));
                     },
                   ),
                 ),
@@ -91,7 +103,10 @@ class ProfilePage extends StatelessWidget {
                     imagePath: 'assets/images/icons/diet.png',
                     title: 'Öğün ve Porsiyon Bilgileri',
                     onTap: () {
-                      // Öğün ve Porsiyon Bilgileri sayfasına yönlendirme yapılacak.
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MealAndPortionInfo()));
                     },
                   ),
                 ),
@@ -100,7 +115,10 @@ class ProfilePage extends StatelessWidget {
                     imagePath: 'assets/images/icons/salad.png',
                     title: 'Yemek Tercihleri',
                     onTap: () {
-                      // Yemek Tercihleri sayfasına yönlendirme yapılacak.
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfilePreferences()));
                     },
                   ),
                 ),

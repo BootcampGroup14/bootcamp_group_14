@@ -1,9 +1,13 @@
-import 'package:bootcamp_group_14/pages/camera_screen.dart';
+import 'package:bootcamp_group_14/api/gemini_ai_screen.dart';
+import 'package:bootcamp_group_14/api/gemini_service.dart';
+import 'package:bootcamp_group_14/pages/camera_pages/camera_screen.dart';
 import 'package:bootcamp_group_14/pages/home_screen.dart';
-import 'package:bootcamp_group_14/pages/profile_health_screen.dart';
-import 'package:bootcamp_group_14/pages/profile_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_health_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_screen.dart';
 import 'package:bootcamp_group_14/pages/saved_screen.dart';
 import 'package:bootcamp_group_14/pages/settings_screen.dart';
+import 'package:bootcamp_group_14/profile_page.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
@@ -20,19 +24,35 @@ class _MainNavigatorState extends State<MainNavigator> {
   var currentUser;
   List<Widget> _pages = [];
   PageController _pageController = PageController(initialPage: 0);
+  CameraDescription? _cameraDescription;
 
   @override
   void initState() {
     currentUser = FirebaseAuth.instance.currentUser!;
     super.initState();
 
-    _pages = [
-      RecipeHomePage(),
-      SavedRecipesPage(),
-      ProfileHealth(),
-      const SettingsPage(),
-      ProfilePage(),
-    ];
+    _initializeCamera().then((_) {
+      setState(() {
+        _pages = [
+          RecipeHomePage(),
+          PhotoAnalyzeScreen(),
+          _cameraDescription != null
+              ? CameraScreen(camera: _cameraDescription!)
+              : Center(child: Text('Kamera bulunamadı')),
+          const SettingsPage(),
+          ProfilePage(),
+        ];
+      });
+    });
+  }
+
+  Future<void> _initializeCamera() async {
+    try {
+      final cameras = await availableCameras();
+      _cameraDescription = cameras.isNotEmpty ? cameras.first : null;
+    } catch (e) {
+      print('Kamera başlatma hatası: $e');
+    }
   }
 
   @override

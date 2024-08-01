@@ -1,4 +1,4 @@
-import 'package:bootcamp_group_14/picked_image_screen.dart';
+import 'package:bootcamp_group_14/pages/camera_pages/picked_image_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:image_picker/image_picker.dart';
@@ -7,7 +7,7 @@ import 'package:image_gallery_saver/image_gallery_saver.dart';
 
 class CameraScreen extends StatefulWidget {
   final CameraDescription camera;
-  const CameraScreen({Key? key, required this.camera}) : super(key: key);
+  const CameraScreen({super.key, required this.camera});
 
   @override
   _CameraScreenState createState() => _CameraScreenState();

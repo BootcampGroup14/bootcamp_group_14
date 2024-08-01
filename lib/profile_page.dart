@@ -1,14 +1,14 @@
-import 'package:bootcamp_group_14/pages/camera_screen.dart';
-import 'package:bootcamp_group_14/pages/profile_edit_page_screen.dart';
+/* import 'package:bootcamp_group_14/pages/camera_pages/camera_screen.dart';
+import 'package:bootcamp_group_14/pages/profile_pages/profile_edit_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 
-class ProfilePage extends StatefulWidget {
+class ProfilePage2 extends StatefulWidget {
   @override
-  _ProfilePageState createState() => _ProfilePageState();
+  _ProfilePage2State createState() => _ProfilePage2State();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _ProfilePage2State extends State<ProfilePage2> {
   late List<CameraDescription> cameras;
 
   @override
@@ -68,7 +68,8 @@ class _ProfilePageState extends State<ProfilePage> {
                       children: [
                         Text(
                           'Group14',
-                          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                         Text(
                           '@kullanıcıGroup14',
@@ -153,99 +154,7 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ],
       ),
-      floatingActionButton: Visibility(
-        child: FloatingActionButton(
-          onPressed: () {
-            if (cameras.isNotEmpty) { // Kameralar mevcutsa geçiş yap
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CameraScreen(camera: cameras.first),
-                ),
-              );
-            }
-          },
-          child: Icon(Icons.camera_alt),
-          backgroundColor: Colors.grey[300],
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        notchMargin: 10.0,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: Icon(Icons.home_outlined),
-              onPressed: () {
-                // Ana Sayfaya yönlendirme işlemleri yapılacak.
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.favorite_border_outlined),
-              onPressed: () {
-                // Favoriler ekranına yönlendirme yapılacak.
-              },
-            ),
-            SizedBox(width: 48),
-            IconButton(
-              icon: Icon(Icons.notifications_none_outlined),
-              onPressed: () {
-                // Bildirimler ekranına yönlendirme yapılacak.
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.person),
-              onPressed: () {
-                // Profil ekranına yönlendirme yapılacak.
-              },
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
-
-class ProfileItem extends StatelessWidget {
-  final String imagePath;
-  final String title;
-  final VoidCallback onTap;
-
-  ProfileItem({required this.imagePath, required this.title, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 20),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(30),
-        child: Container(
-          padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-          decoration: BoxDecoration(
-            color: Color.fromARGB(200, 247, 247, 249),
-            borderRadius: BorderRadius.circular(30),
-          ),
-          child: Row(
-            children: [
-              Image.asset(
-                imagePath,
-                width: 24,
-                height: 24,
-              ),
-              SizedBox(width: 16),
-              Text(
-                title,
-                style: TextStyle(fontSize: 16, color: Colors.black),
-              ),
-              Spacer(),
-              Icon(Icons.arrow_forward_ios, color: Colors.black),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+ */
