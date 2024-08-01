@@ -315,11 +315,12 @@
         <h4>Sprint Notları</h4>
         <ul>
           <li>Front-End Tarafında kalan ekran tasarımları ve yeni ekranların tasarımları yapıldı</li>
-          <li>İlk sprintte olduğu gibi UX/UI tasarımları Figmada yapıldı.</li>
+          <li>İkinci sprintte olduğu gibi UX/UI tasarımları Figmada yapıldı.</li>
           <li>Yapılan yeni ekran tasarımları için arayüz kodlamaları yapıldı.</li>
-          <li>Backend çalışmaları yapıldı.</li>
-          <li>Generative AI ve diğer AI ile geliştirme konuları tartışıldı.</li>
-          <li>Yapılacak AI çalışması ve Search mekanizmasının temeli atıldı. Planlaması yapıldı.</li>
+          <li>Backend model classları oluşturuldu, veritabanına sorgu işlemleri yapıldı.</li>
+          <li>Generative AI ve diğer AI ile geliştirmeleri yapıldı</li>
+          <li>AI ile fotoğraftan tarif oluşturma özelliği entegre edildi.</li>
+          <li>Kullanıcı Promptu ile tarif oluşturma özelliği entegre edildi.</li>
           <li>Sprint review ve Retrospective toplantıları yapıldı. Sprint bitirildi.</li>
         </ul>
       </div>
@@ -334,23 +335,20 @@
         <p>Toplantı içeriği</p>
         <ul>
           <li>Uygulama için tasarımları ve arayüz kodlamaları kalan sayfalar belirlendi.</li>
-          <li>Kalan ve yeni eklenen sayfaların UX/UI tasarımlarının yapılmasına karar verdi.</li>
+          <li>Kalan ve yeni eklenen sayfaların UX/UI tasarımlarının yapılmasına karar verildi.</li>
           <li>Tasarımı yapılacak sayfaların tasklara bölünmesi ve kişilere atanması yapıldı.</li>
-          <li>İlk haftanın UX/UI tasarımları ve arayüz kodlamalarının yapılması. İkinci Hafta backend ve AI kısımlarının planlamasının ve temelinin atılmasına karar verildi.</li>
+          <li>Backend işlemlerinin yapılmasına karar verildi</li>
         </ul>
         <p>Toplantı içeriği</p>
         <ul>
           <li>Backend tarafında yapılacaklar planlandı.</li>
           <li>Backend tarafı için tasklar oluşturuldu. Ve atamaları yapıldı.</li>
-          <li>Uygulamanın AI kısmı için toplantı yapılmasına ve temelin atılmasına karar verildi.</li>
+          <li>Uygulamanın AI kısmı için taskler oluşturuldu ve atamaları yapıldı.</li>
         </ul>
         <p>Toplantı içeriği</p>
         <ul>
-          <li>AI kısmında kullanılacak AI modeli araştırıldı.</li>
-          <li>AI kısmında yapılan araştırmalar sonucunda izlenecek yola karar verildi.</li>
-          <li>Search algoritmasının nasıl oluşturulacağına dair karar verildi.</li>
-          <li>AI kısmının temelleri atıldı. 3. Sprintte yapılmasına karar verildi.</li>
-          <li>Search kısmının temelleri atıldı. 3. Sprintte yapılmasına karar verildi.</li>
+          <li>AI kısmının testleri yapıldı ve değerlendirildi.</li>
+          <li>Backend kısmının testleri yapıldı ve değerlendirildi.</li>
         </ul>
       </div>
       <div>
@@ -359,12 +357,11 @@
       <div>
         <h4>Sprint Review:</h4>
         <ul>
-          <li>Bu sprintte 100 puan hedeflenmiştir. Sprintte 130 puanlık görev bitirilmiştir. Hedeflenen puanın üstünde puan tamamlanmıştır.</li>
+          <li>Bu sprintte 100 puan hedeflenmiştir. Sprintte 100 puanlık görev bitirilmiştir.</li>
           <li>Başlangıçta hedeflenen tüm ekranlarla ilgili UX/UI çalışması yapılmıştır. Tüm ekran dizaynları tamamlanmıştır.</li>
           <li>UI tasarımları yapılan sayfaların Arayüz kodlamaları yapılmıştır.</li>
-          <li>Backend ile ilgili olan diğer tasklar yapılmıştır.</li>
-          <li>AI algoritmasına karar verilmiştir. Ve AI kısmının temelleri atılmıştır.</li>
-          <li>Search algoritmasının karar verilmiş ve temelleri atılmıştır.</li>
+          <li>Backend ile ilgili kodlamalar yapılmıştır</li>
+          <li>AI ile ilgili kodlamalar yapılmıştır</li>
         </ul>
       </div>
       <div>
@@ -373,8 +370,8 @@
       <div>
         <h4>Sprint Retrospective:</h4>
         <ul>
-          <li>Sprint boyunca yaptığımız dailylerin daha plana uygun gün ve saatlerde yapılması daha iyi olacaktır. Bu şekilde sprint sonunda daha az sıkıntı yaşarız.</li>
-          <li>UX/UI tarafındaki tasarımlar çok güzel fakat yazılım becerilerimiz bazen bu ekranların tasarımına yeterli olmamaktadır. Bu durumun bir sonraki sprintte düzelmesi için daha sık iletişim kurmalıyız.</li>
+          <li>Kullanılacak AI modelinin entegre edilmesi ile ilgili sorun yaşadık.</li>
+          <li>Backend ve AI ile ilgili planlama yaparken kapsam ve süre ile ilgili daha detaylı bir çalışma yapmak daha sonraki sprintlerde fayda sağlayacaktır.</li>
         </ul>
       </div>
       <div>
