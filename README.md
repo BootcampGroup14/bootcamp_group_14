@@ -295,4 +295,100 @@
       </div>
     </div>
   </div>
+  <div class="row d-flex flex-column">
+    <h2>Sprint 2</h2>
+    <div class="row">
+      <div>
+        Sprint 2 - App Ekran Görüntüleri
+        <div>
+        <img src="https://i.ibb.co/tqKdVgX/Screenshot-2024-07-21-212518.png" alt="Screenshot-2024-07-21-212518" border="0" />
+        <img src="https://i.ibb.co/7XDGcrk/Screenshot-2024-07-21-212435.png" alt="Screenshot-2024-07-21-212435" border="0" />
+        <img src="https://i.ibb.co/q7D4j97/Screenshot-2024-07-21-212447.png" alt="Screenshot-2024-07-21-212447" border="0" />
+        <img src="https://i.ibb.co/Ct027xc/Screenshot-2024-07-21-212501.png" alt="Screenshot-2024-07-21-212501" border="0" />
+        <img src="https://i.ibb.co/6wCB2MQ/Screenshot-2024-07-21-212537.png" alt="Screenshot-2024-07-21-212537" border="0" />
+        <img src="https://i.ibb.co/Rv2hFX2/Screenshot-2024-07-21-212549.png" alt="Screenshot-2024-07-21-212549" border="0" />
+        <img src="https://i.ibb.co/Z60BXy1/Screenshot-2024-07-21-212600.png" alt="Screenshot-2024-07-21-212600" border="0" />
+        <img src="https://i.ibb.co/yWhD7Ww/Screenshot-2024-07-21-212609.png" alt="Screenshot-2024-07-21-212609" border="0" />
+        <img src="https://i.ibb.co/D1WSpNF/Screenshot-2024-07-21-212625.png" alt="Screenshot-2024-07-21-212625" border="0" />
+        <img src="https://i.ibb.co/MhRyS9T/Screenshot-2024-07-21-212632.png" alt="Screenshot-2024-07-21-212632" border="0" />
+        </div>
+      </div>
+      <div>
+        Sprint 2 - Sprint Board Ekran Görüntüsü Güncellemeleri
+        <img src="https://i.ibb.co/jfKvcdL/Screenshot-2024-07-21-213505.png" alt="Screenshot-2024-07-21-213505" border="0" />
+      </div>
+      <div>
+        <h4>Sprint Notları</h4>
+        <ul>
+          <li>Front-End Tarafında kalan ekran tasarımları ve yeni ekranların tasarımları yapıldı</li>
+          <li>İlk sprintte olduğu gibi UX/UI tasarımları Figmada yapıldı.</li>
+          <li>Yapılan yeni ekran tasarımları için arayüz kodlamaları yapıldı.</li>
+          <li>Backend çalışmaları yapıldı.</li>
+          <li>Generative AI ve diğer AI ile geliştirme konuları tartışıldı.</li>
+          <li>Yapılacak AI çalışması ve Search mekanizmasının temeli atıldı. Planlaması yapıldı.</li>
+          <li>Sprint review ve Retrospective toplantıları yapıldı. Sprint bitirildi.</li>
+        </ul>
+      </div>
+      <div>
+        Sprint boyunca tamamlanması gereken puan:100
+      </div>
+      <div>
+        Puan tamamlama mantığı:Sprint başında her sprint için tamamlanması hedeflenen bir puan hedefi belirlenir. Daha sonra oluşturulan backloglara zorluk ve süre değerleri dikkate alınarak puanlama işlemleri yapılır. Sprint boyunca da en başta belirlenen puan hesefine ulaşılması adına görevler alınır ve tamamlanır. 
+      </div>
+      <div>
+        <h4>Daily Scrum:</h4>
+        <p>Toplantı içeriği</p>
+        <ul>
+          <li>Uygulama için tasarımları ve arayüz kodlamaları kalan sayfalar belirlendi.</li>
+          <li>Kalan ve yeni eklenen sayfaların UX/UI tasarımlarının yapılmasına karar verdi.</li>
+          <li>Tasarımı yapılacak sayfaların tasklara bölünmesi ve kişilere atanması yapıldı.</li>
+          <li>İlk haftanın UX/UI tasarımları ve arayüz kodlamalarının yapılması. İkinci Hafta backend ve AI kısımlarının planlamasının ve temelinin atılmasına karar verildi.</li>
+        </ul>
+        <p>Toplantı içeriği</p>
+        <ul>
+          <li>Backend tarafında yapılacaklar planlandı.</li>
+          <li>Backend tarafı için tasklar oluşturuldu. Ve atamaları yapıldı.</li>
+          <li>Uygulamanın AI kısmı için toplantı yapılmasına ve temelin atılmasına karar verildi.</li>
+        </ul>
+        <p>Toplantı içeriği</p>
+        <ul>
+          <li>AI kısmında kullanılacak AI modeli araştırıldı.</li>
+          <li>AI kısmında yapılan araştırmalar sonucunda izlenecek yola karar verildi.</li>
+          <li>Search algoritmasının nasıl oluşturulacağına dair karar verildi.</li>
+          <li>AI kısmının temelleri atıldı. 3. Sprintte yapılmasına karar verildi.</li>
+          <li>Search kısmının temelleri atıldı. 3. Sprintte yapılmasına karar verildi.</li>
+        </ul>
+      </div>
+      <div>
+        Ürün Backlog URL: -
+      </div>
+      <div>
+        <h4>Sprint Review:</h4>
+        <ul>
+          <li>Bu sprintte 100 puan hedeflenmiştir. Sprintte 130 puanlık görev bitirilmiştir. Hedeflenen puanın üstünde puan tamamlanmıştır.</li>
+          <li>Başlangıçta hedeflenen tüm ekranlarla ilgili UX/UI çalışması yapılmıştır. Tüm ekran dizaynları tamamlanmıştır.</li>
+          <li>UI tasarımları yapılan sayfaların Arayüz kodlamaları yapılmıştır.</li>
+          <li>Backend ile ilgili olan diğer tasklar yapılmıştır.</li>
+          <li>AI algoritmasına karar verilmiştir. Ve AI kısmının temelleri atılmıştır.</li>
+          <li>Search algoritmasının karar verilmiş ve temelleri atılmıştır.</li>
+        </ul>
+      </div>
+      <div>
+        Sprint Review Katılımcıları: Halil İbrahim Dişli - Durukan Çoban - Fahriye Yüksel - Harun Burak Çoban - Fatıma Elmusa
+      </div>
+      <div>
+        <h4>Sprint Retrospective:</h4>
+        <ul>
+          <li>Sprint boyunca yaptığımız dailylerin daha plana uygun gün ve saatlerde yapılması daha iyi olacaktır. Bu şekilde sprint sonunda daha az sıkıntı yaşarız.</li>
+          <li>UX/UI tarafındaki tasarımlar çok güzel fakat yazılım becerilerimiz bazen bu ekranların tasarımına yeterli olmamaktadır. Bu durumun bir sonraki sprintte düzelmesi için daha sık iletişim kurmalıyız.</li>
+        </ul>
+      </div>
+      <div>
+        Diğer Notlar:
+      </div>
+      <div>
+        Ek Dosyalar:
+      </div>
+    </div>
+  </div>
 </div>
