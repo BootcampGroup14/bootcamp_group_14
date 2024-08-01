@@ -308,7 +308,7 @@
         </div>
       </div>
       <div>
-        Sprint 2 - Sprint Board Ekran Görüntüsü Güncellemeleri
+        Sprint 3 - Sprint Board Ekran Görüntüsü Güncellemeleri
         <img src="https://i.ibb.co/dcb2tKV/sprint3-trello.png" alt="Screenshot-2024-07-21-213505" border="0" />
       </div>
       <div>
